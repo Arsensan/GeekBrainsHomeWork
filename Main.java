@@ -1,5 +1,18 @@
 package GeekBrainsLessons;
 
+ Lesson6(EnchancedOOP)
+public class Main {
+
+    public static void main(String[] args) {
+	Cat cat = new Cat (205,0,"Барсик");
+        Dog dog = new Dog (160,100,"Шарик");
+        dog.run();
+        dog.swim();
+        cat.run();
+        cat.swim();
+    }
+}
+
 import java.util.Arrays;
 
 public class Main {
@@ -20,3 +33,4 @@ public class Main {
 }
 
 
+Lesson-1
