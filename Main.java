@@ -1,5 +1,14 @@
 package GeekBrainsLessons;
 
+ Homework8(Calculator)
+public class Main {
+
+    public static void main(String[] args) {
+        new MyOwnCalculator();
+
+    }
+}
+
  СatsAndPlate
 public class Main {
 
@@ -54,4 +63,5 @@ Lesson-1
 
 
 Lesson-1
+ Lesson-1
  Lesson-1
