@@ -1,52 +1,53 @@
+import org.w3c.dom.Node;
+
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-     //methodOneException(new String[4][4]);
-     methodTwoException(new String[4][4]);
+        HashMapPractice();
+        System.out.println();
+        HashMapPractice2();
     }
 
-    static String[][] arrayMethod() {
-        String[][] a = {
-                {"2", "11", "5", "8"},
-                {"4", "3", "2", "2"},
-                {"11", "3", "5", "34"},
-                {"14", "2", "3F", "51"}
-        };
-        int sum = 0;
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 4; j++) {
+    static void HashMapPractice() {
 
-                sum += Integer.parseInt(a[i][j]);
-                System.out.print(sum + " ");
-            }
-            System.out.println();
+        Map<String, TelephoneBook> contact = new HashMap<>();
+
+        contact.put("Ivanov", new TelephoneBook("Ivanov", 5541));
+        contact.put("Petrov", new TelephoneBook("Petrov", 5531));
+        contact.put("Ogurcov", new TelephoneBook("Ogurcov", 5412));
+        contact.put("Taburetkin", new TelephoneBook("Taburetkin", 5551));
+        contact.put("Rakov", new TelephoneBook("Rakov", 5761));
+        contact.put("Bokov", new TelephoneBook("Bokov", 5241));
+        contact.put("Bokov", new TelephoneBook("Bokov", 5555));
+        for (Map.Entry<String, TelephoneBook> o : contact.entrySet()) {
+
+            System.out.println(o.getKey() + ": " + o.getValue());
         }
-
-        return a;
+        System.out.println("Вы искали:" + " " + contact.get("Ivanov"));
     }
 
-    static String[][] methodOneException(String[][] arr) throws MyArraySizeException {
+    static void HashMapPractice2() {
 
-        try {
-            return arrayMethod();
+        Map<String, Integer> words = new HashMap<>();
 
-        } catch (
-                ArrayIndexOutOfBoundsException e) {
-            throw new MyArraySizeException("Массив вышел за границы", e);
+        words.put("map", 0);
+        words.put("one", 0);
+        words.put("key", 0);
+        words.put("sleep", 0);
+        words.put("bug", 0);
+        words.put("carrot", 0);
+        words.put("goat", 0);
+        words.put("bear", 0);
+        words.put("town", 0);
+        words.put("city", 0);
+        words.put("goal", 0);
+        words.put("map", 0);
+        for (Map.Entry<String, Integer> o : words.entrySet()) {
+            int x = o.getValue() + 1;
+            System.out.println(o.getKey() + ": Количество использований слова: " + x);
         }
-    }
-    static String [][] methodTwoException(String[][] arr2) throws MyArrayDataException {
-    try{
-        return arrayMethod();
-    }catch( IllegalArgumentException e){
-        throw new MyArrayDataException( "Неверный формат строки " + e);
     }
 }
-}
-
-
-
-
-
-
 
 
