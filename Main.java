@@ -1,5 +1,8 @@
 package GeekBrainsLessons;
 
+JavaLeveL2.Homework1
+import GeekBrainsLessons.Cat;
+=======
  Homework8(Calculator)
 public class Main {
 
@@ -40,10 +43,32 @@ public class Main {
 }
 
 import java.util.Arrays;
+ Lesson-1
 
 public class Main {
 
     public static void main(String[] args) {
+ JavaLeveL2.Homework1
+        Sportsmans[] sportsmans = {
+                new Human("Иван", 2, 5),
+                new Cat("Барсик", 4, 2),
+                new Robot("Бэндер", 1, 10),
+
+        };
+        Tasks[] tasks = {
+                new Wall(3),
+                new RunRoad(6),
+        };
+        System.out.println("Сорвенования начинаются!");
+        for (int i = 0; i <tasks.length; i++){
+            for (int j = 0; j< sportsmans.length; j++){
+                tasks[i].taskComplete(sportsmans[j]);
+                }
+            }
+        }
+
+    }
+=======
         Coworker[] workerList = new Coworker[5];
         workerList[0] = new Coworker("Dobrinya Nikitich", "Policeman", "Popovich@mail.ru", 89777777, 33333, 33);
         workerList[1] = new Coworker("Alesha Popovich", "Army", "aleshanavsegda@mail.ru", 89777776, 34111, 35);
@@ -65,3 +90,4 @@ Lesson-1
 Lesson-1
  Lesson-1
  Lesson-1
+Lesson-1
